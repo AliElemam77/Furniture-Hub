@@ -33,6 +33,7 @@ function Product({ product }) {
           type="button"
           onClick={(e) => {
             e.preventDefault();
+            // dispatch(addToCart(product));
             dispatch(addToCart(product));
           }}
           className="block mt-5 text-white w-full rounded-sm bg-yellow-600 p-4 text-sm font-medium transition hover:scale-105"

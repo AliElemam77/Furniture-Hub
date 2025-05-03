@@ -2,19 +2,21 @@ import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartCard from "../../components/CartCard";
 import { AnimatePresence } from "framer-motion";
-import { cartCalling, clearCart } from "../../app/slice/cartSlice";
+// import { cartCalling, clearCart } from "../../app/slice/cartSlice";
+import {  clearCart } from "../../app/slice/cartSlice";
 
 function index() {
   const cart = useSelector((state) => state.cart);
+  console.log(cart);
   const dispatch = useDispatch();
 
-  const fetchCart = useCallback(() => {
-    dispatch(cartCalling());
-  }, []);
+  // const fetchCart = useCallback(() => {
+  //   dispatch(cartCalling());
+  // }, []);
 
-  useEffect(() => {
-    fetchCart();
-  }, []);
+  // useEffect(() => {
+  //   fetchCart();
+  // }, []);
 
   return (
     <div>
