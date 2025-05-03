@@ -49,5 +49,14 @@
       "title": "Soft Woolen Carpet"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "5",
+      "category": "Wardrobes",
+      "image": "https://img.freepik.com/free-photo/chic-modern-luxury-aesthetics-style-living-room-blue-tone_53876-125839.jpg?ga=GA1.1.2974258.1730238639&semt=ais_hybrid&w=740",
+      "price": 4800,
+      "salePercentage": 12,
+      "title": "Spacious Wooden Wardrobe"
+    }
+  ]
 }

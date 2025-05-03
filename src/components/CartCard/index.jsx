@@ -51,7 +51,7 @@ function CartItem({ item }) {
 
             <button
               type="button"
-              onClick={() => dispatch(deleteFromCart(item.id))}
+              onClick={() => dispatch(deleteFromCart(item))}
               className=" text-gray-500 transition hover:text-red-600"
               aria-label="Remove item"
             >

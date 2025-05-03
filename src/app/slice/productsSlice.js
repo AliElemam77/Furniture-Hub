@@ -1,35 +1,89 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchProducts = createAsyncThunk("fetchProducts", async () => {
-  let response = await axios.get("http://localhost:3000/products");
-  return response.data;
-});
+// export const fetchProducts = createAsyncThunk("fetchProducts", async () => {
+//   let response = await axios.get("http://localhost:3000/products");
+//   return response.data;
+// });
 
 const productSlice = createSlice({
   name: "products",
   initialState: {
-    products: [],
+    products: [
+      {
+        id: "1",
+        category: "Beds",
+        image:
+          "https://img.freepik.com/free-photo/mid-century-modern-living-room-interior-design-with-monstera-tree_53876-129805.jpg?ga=GA1.1.2974258.1730238639&semt=ais_hybrid&w=740",
+        price: 5500,
+        salePercentage: 10,
+        title: "Luxury King Size Bed",
+      },
+      {
+        id: "2",
+        category: "Sofas",
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+        price: 4000,
+        salePercentage: 15,
+        title: "Comfortable Sofa Set",
+      },
+      {
+        id: "3",
+        category: "Curtains",
+        image:
+          "https://img.freepik.com/free-photo/gray-sofa-white-living-room-interior-with-copy-space-3d-rendering_43614-802.jpg?ga=GA1.1.2974258.1730238639&semt=ais_hybrid&w=740",
+        price: 1300,
+        salePercentage: 5,
+        title: "Elegant Fabric Curtains",
+      },
+      {
+        id: "4",
+        category: "Dining Tables",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        price: 7200,
+        salePercentage: 20,
+        title: "Modern Dining Table",
+      },
+      {
+        id: "5",
+        category: "Wardrobes",
+        image:
+          "https://img.freepik.com/free-photo/chic-modern-luxury-aesthetics-style-living-room-blue-tone_53876-125839.jpg?ga=GA1.1.2974258.1730238639&semt=ais_hybrid&w=740",
+        price: 4800,
+        salePercentage: 12,
+        title: "Spacious Wooden Wardrobe",
+      },
+    ],
     loading: false,
     error: null,
   },
 
-  reducers: {},
+  reducers: {
+    setProducts: (state, action) => {
+      state.products = action.payload;
+    },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+    setError: (state, action) => {
+      state.error = "something went wrong";
+    },
+  },
 
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchProducts.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.products = action.payload;
-        state.loading = false;
-      })
-      .addCase(fetchProducts.rejected, (state) => {
-        state.loading = false;
-        state.error = "Something went wrong";
-      });
+    // builder
+    //   .addCase(fetchProducts.pending, (state) => {
+    //     state.loading = true;
+    //     state.error = null;
+    //   })
+    //   .addCase(fetchProducts.fulfilled, (state, action) => {
+    //     state.products = action.payload;
+    //     state.loading = false;
+    //   })
+    //   .addCase(fetchProducts.rejected, (state) => {
+    //     state.loading = false;
+    //     state.error = "Something went wrong";
+    //   });
   },
 });
 
