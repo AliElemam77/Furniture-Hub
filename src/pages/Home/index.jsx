@@ -16,7 +16,10 @@ function index() {
           />
         </div>
 
-        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 md:top-20 md:right-6 md:left-auto md:translate-x-0 bg-primary w-[90%] md:w-[640px] h-auto md:h-[443px] p-6 md:p-10 flex flex-col gap-y-4 justify-center">
+        <div
+          className="rounded-xl backdrop-blur-lg border border-gray-900  absolute top-10 left-1/2 transform -translate-x-1/2 md:top-28 md:right-9 md:left-auto md:translate-x-0  w-[90%]
+         md:w-[640px] h-auto md:h-[443px] p-6 md:p-10 flex flex-col gap-y-4 justify-center"
+        >
           <p className="font-bold text-sm md:text-base">New Arrivals!</p>
           <p className="text-3xl md:text-5xl text-amber-600 font-bold leading-tight">
             Discover Our Exclusive Furniture <br />

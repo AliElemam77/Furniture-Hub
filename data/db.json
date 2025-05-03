@@ -49,14 +49,5 @@
       "title": "Soft Woolen Carpet"
     }
   ],
-  "cart": [
-    {
-      "id": "2",
-      "category": "Sofas",
-      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-      "price": 4000,
-      "salePercentage": 15,
-      "title": "Comfortable Sofa Set"
-    }
-  ]
+  "cart": []
 }
